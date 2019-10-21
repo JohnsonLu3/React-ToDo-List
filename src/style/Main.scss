@@ -1,0 +1,98 @@
+main{
+	
+}
+
+#addButton{
+	z-index: 1;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	height: 50px; 
+	width: 50px;
+	border-radius: 100px;
+	border-style: none;
+	border-width: 0;
+	background-color: green;
+	 -webkit-transition: all .2s; /* Safari prior 6.1 */
+  	transition: all .2s;
+	-webkit-box-shadow: 9px 0px 7px -5px rgba(0,0,0,0.19);
+	-moz-box-shadow: 9px 0px 7px -5px rgba(0,0,0,0.19);
+	box-shadow: 9px 0px 7px -5px rgba(0,0,0,0.19);
+
+	
+	p{
+		font-weight: 800;
+		color: white;
+		font-size: 18px;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+#addButton:hover{
+	transform: scale(1.2);
+}
+
+#ToDoList{
+	-webkit-box-shadow: 9px 0px 7px -5px rgba(0,0,0,0.19);
+	-moz-box-shadow: 9px 0px 7px -5px rgba(0,0,0,0.19);
+	box-shadow: 9px 0px 7px -5px rgba(0,0,0,0.19);
+	
+ 	-webkit-transition: all .2s; /* Safari prior 6.1 */
+  	transition: all .2s;
+	
+	background-color: #f2f2f2;
+	margin: 20px;
+	border-radius: 5px;
+	padding: 10px 5px;
+	
+	
+	ul{
+		list-style: none;
+		padding: 0;
+	}
+	
+	li{
+		input{
+			margin-left: 20px;
+			display: inline;
+			
+		}
+		
+		label{
+			padding-left: 10px;
+			display: inline;
+		}
+		:hover{
+				cursor: pointer;
+			}
+		
+		.trashButt{
+			position: relative;
+			float: right;
+			margin: 0 10px;
+			border: none;
+			border-radius: 5px;
+			color: white;
+			font-weight: 800;
+			background-color: rgba(229, 56, 56, 0.86);
+			
+			p{
+				padding: 0;
+				margin: 0;
+			}
+			
+		}
+		
+		padding: 4px 0;
+		border-bottom-color: rgba(118, 155, 255, 0.29);
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+	}
+	
+	li:first-child{
+		border-top-color: rgba(118, 155, 255, 0.29);
+		border-top-style: solid;
+		border-top-width: 2px;
+	}
+}
