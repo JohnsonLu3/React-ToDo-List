@@ -8,9 +8,7 @@ function App_Body(){
 	 return (
 		 <main>
 			<ToDoList />
-		 	<button id="addButton">
-		 		<p>+</p>
-		 	</button>
+		 	
 		 </main>
 	 );
 }

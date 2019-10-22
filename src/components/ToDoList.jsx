@@ -17,9 +17,7 @@ class ToDoList extends React.Component {
 	}
 
 	constructor(props){
-			super(props);
-
-			
+			super(props);			
 	}
 	
 	render(){
@@ -32,6 +30,22 @@ class ToDoList extends React.Component {
 							})
 						}
 					 </ul>
+				
+				<button id="addButton" onClick={this.showAddNote}>
+					<p>+</p>
+				</button>
+				
+				<div id="addModal" className="hide">
+					<div className="container">
+						<h2>Add New Note</h2>
+						<input id="addNoteInput" type="Text" placeholder="Wash the dishes..."></input>
+						<br/>
+						<div className="dualButtons">
+							<button className="goodButt" onClick={this.addNote}>ADD</button>
+							<button className="badButt" onClick={this.cancelNote}>CANCEL</button>
+						</div>
+					</div>
+				</div>
 			 </div>
 		 );
 	}
@@ -61,5 +75,39 @@ class ToDoList extends React.Component {
 		
 		return;
 	}
+	
+	showAddNote = () =>{
+		console.log("Adding Note...")
+		
+		var modal = document.getElementById("addModal");
+		modal.classList.remove("hide");
+		
+		return;
+	}
+	
+	cancelNote = () =>{
+		console.log("Canceling Note...")
+		var modal = document.getElementById("addModal");
+		var addNoteInput = document.getElementById("addNoteInput");
+		modal.classList.add("hide");
+		addNoteInput.value = "";
+		
+		return;
+	}
+	
+	addNote = () =>{
+		console.log("Canceling Note...")
+		var modal = document.getElementById("addModal");
+		var addNoteInput = document.getElementById("addNoteInput");
+		modal.classList.add("hide");
+		
+		this.state.ToDo.push(
+			{val : addNoteInput.value, checked : false});
+		addNoteInput.value = "";
+		this.setState({ ToDo : this.state.ToDo});
+		
+		return;
+	}
+	
 }
 export default ToDoList;
