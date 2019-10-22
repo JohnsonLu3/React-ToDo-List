@@ -21,14 +21,14 @@ class ToDoItem extends React.Component {
 					
 					{
 						checked ? 
-							(<input id={checkboxID} type="checkbox" checked onChange={this.props.markChecked.bind(this, this.id)} />)
+							(<input id={checkboxID} type="checkbox" checked onChange={this.props.markChecked.bind(this, id)} />)
 						:
-							(<input id={checkboxID} type="checkbox" onChange={this.props.markChecked.bind(this, this.id)} />)
+							(<input id={checkboxID} type="checkbox" onChange={this.props.markChecked.bind(this, id)} />)
 					}
 					
 					<label for={checkboxID}>{this.props.ToDoValue}</label>
 
-					<button onClick={this.props.deleteItem.bind(this, this.id)} id={trashButtID} value={checkboxID} className="trashButt">
+					<button onClick={this.props.deleteItem.bind(this, id)} id={trashButtID} value={checkboxID} className="trashButt">
 						<p>X</p>
 					</button>
 				</li>
